@@ -2,19 +2,12 @@
 # -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 #+ Autor:  	Ran#
-#+ Creado: 	2022/03/12 21:59:43.397991
-#+ Editado:	2022/03/12 22:21:46.395917
+#+ Creado: 	2022/03/12 22:22:39.732325
+#+ Editado:	2022/03/12 22:26:07.262877
 # ------------------------------------------------------------------------------
-import sqlite3
-
-from src.modelo.datos_consulta_dto import DatosConsultaDto
-
-import src.modelo.interfaca_datumbazo as idb
+import src.modelo.datumbazo as patron
+import src.modelo.sqlite as estratexia_concreta
 # ------------------------------------------------------------------------------
-class Sqlite(idb.DatumBazo):
-    def __init__(self):
-        pass
-
-    def executar(self, datos_consulta_dto: DatosConsultaDto):
-        print('funca')
+db = patron.DatumBazo(estratexia_concreta.Sqlite())
+db.executar('a')
 # ------------------------------------------------------------------------------

@@ -2,19 +2,14 @@
 # -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 #+ Autor:  	Ran#
-#+ Creado: 	2022/03/12 21:59:43.397991
-#+ Editado:	2022/03/12 22:21:46.395917
+#+ Creado: 	2022/03/12 22:12:46.038794
+#+ Editado:	2022/03/12 22:14:13.844092
 # ------------------------------------------------------------------------------
-import sqlite3
-
-from src.modelo.datos_consulta_dto import DatosConsultaDto
-
-import src.modelo.interfaca_datumbazo as idb
+from dataclasses import dataclass
 # ------------------------------------------------------------------------------
-class Sqlite(idb.DatumBazo):
-    def __init__(self):
-        pass
-
-    def executar(self, datos_consulta_dto: DatosConsultaDto):
-        print('funca')
+@dataclass
+class DatosConsultaDto:
+    operacion: str
+    taboa: str
+    obxecto: str
 # ------------------------------------------------------------------------------
